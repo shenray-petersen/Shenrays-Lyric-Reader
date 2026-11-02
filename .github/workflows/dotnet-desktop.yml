@@ -67,6 +67,15 @@ jobs:
       with:
         fetch-depth: 0
 
+    # Add git-koi right after checkout
+    - name: git-profile-koi
+      uses: yalongwastaken/git-koi@v1.0.2
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
     # Install the .NET Core workload
     - name: Install .NET Core
       uses: actions/setup-dotnet@v4
